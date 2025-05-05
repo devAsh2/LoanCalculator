@@ -5,6 +5,7 @@ import Header from './components/Header';
 import { Box, Container } from '@mui/material';
 import  Calculator  from './components/Calculator';
 import ExchangeRates from './components/ExchangeRates';
+import AboutPage from './pages/AboutPage';
 
 function App() {
 	return (
@@ -21,6 +22,9 @@ function App() {
 					<Routes>
 					<Route path="/" element={<Calculator />} />
 					<Route path="/exchange-rates" element={<ExchangeRates/>}/>
+					<Route path="/about" element={<AboutPage />} />
+					{/* <Route path="/error" element={<ErrorPage />} />
+					<Route path="*" element={<NotFoundPage />} /> */}
 					</Routes>
 				</Container>
 				</Box>
