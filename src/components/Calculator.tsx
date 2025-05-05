@@ -19,7 +19,7 @@ import {
 } from '@mui/material';
 import type {SelectChangeEvent} from "@mui/material"
 import useLoanCalculator from '../hooks/useLoanCalculator';
-import useCurrencyConverter from '../hooks/useCurrencyCalculator';
+import useCurrencyConverter from '../hooks/useCurrencyConverter';
 import AmortizationTable from "./AmortizationTable"
 
 

@@ -4,6 +4,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import Header from './components/Header';
 import { Box, Container } from '@mui/material';
 import  Calculator  from './components/Calculator';
+import ExchangeRates from './components/ExchangeRates';
 
 function App() {
 	return (
@@ -19,7 +20,7 @@ function App() {
 				<Container maxWidth="lg" sx={{ flex: 1 }}>
 					<Routes>
 					<Route path="/" element={<Calculator />} />
-					
+					<Route path="/exchange-rates" element={<ExchangeRates/>}/>
 					</Routes>
 				</Container>
 				</Box>
