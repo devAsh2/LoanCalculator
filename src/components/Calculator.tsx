@@ -20,6 +20,7 @@ import {
 import type {SelectChangeEvent} from "@mui/material"
 import useLoanCalculator from '../hooks/useLoanCalculator';
 import useCurrencyConverter from '../hooks/useCurrencyCalculator';
+import AmortizationTable from "./AmortizationTable"
 
 
 const Calculator: React.FC = () => {
@@ -240,7 +241,10 @@ const Calculator: React.FC = () => {
               </Button>
             </Box>
           </Box>
-          
+          <AmortizationTable 
+            amortizationSchedule={result.amortizationSchedule} 
+            currencyCode={selectedCurrency} 
+          />
           
         </>
       )}
