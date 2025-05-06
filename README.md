@@ -1,54 +1,46 @@
-# React + TypeScript + Vite
+# Loan Calculator App (loan-calApp)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+The Loan Calculator App is a modern, single-page web application built using React JS and Material UI. It allows users to calculate loan EMIs (Equated Monthly Installments), view a detailed amortization schedule, and see real-time currency conversions of their EMI using live exchange rates.
 
-Currently, two official plugins are available:
+## Features
+- **Loan EMI Calculation**: Calculate monthly EMI using standard financial formulas.
+- **Dynamic Amortization Schedule**: View a detailed amortization schedule with a monthly breakdown.
+- **Real-time Currency Conversion**: Convert EMI amounts using live exchange rates from an external API.
+- **Paginated Exchange Rate Table**: Access exchange rates for 160+ currencies.
+- **Dark/Light Mode Toggle**: Customize the app's appearance based on user preference.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- **React**: For building the user interface with hooks and context API.
+- **Material UI**: For styling and responsive components.
+- **Axios**: For making API calls to fetch exchange rates.
+- **Exchange Rate API**: For real-time currency conversion.
 
-## Expanding the ESLint configuration
+## Installation
+To run the Loan Calculator App locally, follow these steps:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/loan-calApp.git
+   cd loan-calApp
+2. **Install the dependencies**
+   ```bash
+   npm install  
+3. **Add the environment variables in .env file**
+   Sign in Exchange API and generate your API key
+   ```bash
+   VITE_REACT_APP_API_KEY='Your_API_Key'
+   VITE_EXCHANGE_API_URI = 'https://v6.exchangerate-api.com/v6'
+4. **Run the repository**
+   ```bash
+   npm run dev
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Usage
+1. **Enter Loan Details**: Input the loan amount, interest rate, and term in years.
+2. **Calculate EMI**: Click the "Calculate" button to compute the monthly EMI.
+3. **View Amortization Schedule**: Check the detailed amortization schedule displayed below the calculator.
+4. **Currency Conversion**: Use the currency converter to see how your EMI translates into different currencies based on live exchange rates.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Acknowledgments
+- Thanks to the contributors and the open-source community for their support and resources.
+- Special thanks to the developers of the libraries and APIs used in this project, including React, Material UI, and Axios.
