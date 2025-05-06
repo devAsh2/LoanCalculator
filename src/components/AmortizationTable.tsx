@@ -28,7 +28,7 @@ const AmortizationTable: React.FC<AmortizationTableProps> = ({
   const [rowsPerPage, setRowsPerPage] = useState(10);
 
   // Handle page change
-  const handleChangePage = (event: unknown, newPage: number) => {
+  const handleChangePage = (_: unknown, newPage: number) => {
     setPage(newPage);
   };
 

@@ -37,7 +37,7 @@ const ExchangeRates: React.FC = () => {
 		useCurrencyConverter(baseCurrency);
 
 	// Handle page change
-	const handleChangePage = (event: unknown, newPage: number) => {
+	const handleChangePage = (_: unknown, newPage: number) => {
 		setPage(newPage);
 	};
 

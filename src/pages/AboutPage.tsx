@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, Paper, GridLegacy as Grid, Divider, List, ListItem, ListItemIcon, ListItemText, useTheme } from '@mui/material';
-import { CheckCircle, PackageIcon, Share2, Database, Moon } from 'lucide-react';
+import { CheckCircle, Share2, Database, Moon } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   const theme = useTheme();

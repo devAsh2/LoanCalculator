@@ -33,10 +33,10 @@ const Calculator: React.FC = () => {
 	const { calculateLoan, resetCalculator, result, loading, error } =
 		useLoanCalculator();
 	const {
-		convertAmount,
-		exchangeRates,
+		
+		
 		changeBaseCurrency,
-		loading: currencyLoading,
+		
 	} = useCurrencyConverter();
 
 	useEffect(() => {
