@@ -3,8 +3,8 @@ import axios from 'axios';
 import {type ExchangeRateData} from '../types';
 
 // Replace with your actual API key when using
-const API_KEY = '9314c4d51da814bb2fd1844a';
-const BASE_URL = 'https://v6.exchangerate-api.com/v6';
+const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
+const BASE_URL = import.meta.env.VITE_EXCHANGE_API_URI;
 
 const useCurrencyConverter = (baseCurrency: string = 'USD') => {
   const [exchangeRates, setExchangeRates] = useState<Record<string, number>>({});
