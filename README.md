@@ -21,8 +21,8 @@ To run the Loan Calculator App locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/loan-calApp.git
-   cd loan-calApp
+   git clone https://github.com/devAsh2/LoanCalculator.git
+   cd LoanCalculator
 2. **Install the dependencies**
    ```bash
    npm install  
