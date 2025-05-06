@@ -26,7 +26,7 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Exchange Rates (Live)', href: '/exchange-rates' },
   { name: 'About', href: '/about' },
-  { name: 'Error Page', href: '/error-example' },
+  { name: 'Error Page', href: '/error' },
 ];
 
 const Header: React.FC = () => {

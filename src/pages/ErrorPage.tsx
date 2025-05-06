@@ -46,7 +46,7 @@ const ErrorPage: React.FC = () => {
         <Box sx={{ mb: 4, py: 3, px: 4, bgcolor: theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.03)', borderRadius: 2 }}>
           <Typography variant="body1" component="p" sx={{ fontFamily: 'monospace', textAlign: 'left' }}>
             Error: The application encountered an unexpected error.<br />
-            Location: {window.location.pathname}<br />
+            Path: {window.location.pathname}<br />
             Time: {new Date().toLocaleString()}
           </Typography>
         </Box>
