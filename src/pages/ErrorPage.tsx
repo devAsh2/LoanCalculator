@@ -3,7 +3,12 @@ import { Box, Typography, Button, Paper, useTheme } from '@mui/material';
 import { AlertTriangle } from 'lucide-react';
 import { Link as RouterLink } from 'react-router-dom';
 
-const ErrorPage: React.FC = () => {
+interface ErrorPageProps {
+  error?: Error | null;
+  errorInfo?: React.ErrorInfo | null;
+}
+
+const ErrorPage: React.FC<ErrorPageProps> = ({ error, errorInfo }) => {
   const theme = useTheme();
 
   return (
@@ -45,7 +50,15 @@ const ErrorPage: React.FC = () => {
         
         <Box sx={{ mb: 4, py: 3, px: 4, bgcolor: theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.03)', borderRadius: 2 }}>
           <Typography variant="body1" component="p" sx={{ fontFamily: 'monospace', textAlign: 'left' }}>
-            Error: The application encountered an unexpected error.<br />
+            {error ? (
+              <>
+                Error: {error.message}<br />
+                {errorInfo && <span>Component Stack: {errorInfo.componentStack}</span>}<br />
+              </>
+            ) : (
+              'Error: The application encountered an unexpected error.'
+            )}
+            <br />
             Path: {window.location.pathname}<br />
             Time: {new Date().toLocaleString()}
           </Typography>

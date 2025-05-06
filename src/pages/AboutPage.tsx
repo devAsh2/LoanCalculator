@@ -4,6 +4,8 @@ import { CheckCircle, PackageIcon, Share2, Database, Moon } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   const theme = useTheme();
+  //Uncomment this line to throw an Error to check whether About Page error
+  // throw new Error("About page error");
 
   return (
     <Box sx={{ py: 4, px: { xs: 2, md: 4 } }}>
